@@ -13,7 +13,7 @@
 <nav id="to-shine-page-navigation" class="navbar navbar-expand-lg bg-white">
   <div class="container">
     <a class="navbar-brand" href="<%= DotNetNuke.Common.Globals.NavigateURL(PortalController.GetCurrentPortalSettings().HomeTabId) %>" title="2shine DNN BS5 2sxc (change this in the theme-body.ascx)">
-      <img alt="Logo" class="logo img-fluid" src="<%=SkinPath%>images/logo.svg">
+      <img alt="Logo" class="logo img-fluid" src="<%=SkinPath%>images/Logo200X68.png">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
       <span class="navbar-toggler-icon"></span>
@@ -22,7 +22,7 @@
     <div class="offcanvas offcanvas-start border-0" id="offcanvasNavbar" tabindex="-1" >
       <div class="offcanvas-header">
         <a class="navbar-brand" href="<%= DotNetNuke.Common.Globals.NavigateURL(PortalController.GetCurrentPortalSettings().HomeTabId) %>" title="2shine DNN BS5 2sxc (change this in the theme-body.ascx)">
-          <img alt="Logo" class="logo img-fluid" src="<%=SkinPath%>images/logo.svg">
+          <img alt="Logo" class="logo img-fluid" src="<%=SkinPath%>images/Logo200X68.png">
         </a>
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
       </div>
@@ -79,21 +79,22 @@
     </div>
   </div>
 </nav>
-
+<!--
 <div id="to-shine-page-header-pane" class="container-xxl px-0 <%= (HeaderPane.Attributes["class"] ?? "").Contains("DNNEmptyPane") ? "to-shine-header-pane-empty" : "" %>">
   <div id="HeaderPane" runat="server" containertype="G" containername="2shineBS5" containersrc="fullwidthWithoutPadding.ascx"></div>
 </div>
+-->
 <main id="to-shine-page-main">
   <%
   if(ShowBreadcrumb){
   %>
-    <div class="to-shine-page-breadcrumb" aria-label="Breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<!--    <div class="to-shine-page-breadcrumb" aria-label="breadcrumb">
       <div class="container py-2">
         <a class="to-shine-page-breadcrumb-link to-shine-page-breadcrumb-home" aria-current="page" href="<%= DotNetNuke.Common.Globals.NavigateURL(PortalSettings.HomeTabId) %>"><%= LocalizeString("Home.Text") %></a>
         <span>&nbsp;&rsaquo;&nbsp;</span><span class="to-shine-page-breadcrumb-trigger display-inline display-md-none"><a aria-current="page">...</a></span>
         <dnn:BREADCRUMB runat="server" aria-current="page" Separator="<span>&nbsp;&rsaquo;&nbsp;</span>" CssClass="to-shine-page-breadcrumb-link" RootLevel="0" />
       </div>		
-    </div>
+    </div>-->
   <%
   }
   %>
@@ -132,31 +133,6 @@
 </main>
 <footer id="to-shine-page-footer">
   <div class="container py-4 d-flex justify-content-md-between flex-column flex-md-row text-white">
-    <ul class="to-shine-footer-address" itemscope itemtype="http://schema.org/LocalBusiness">
-      <li>
-        <strong itemprop="name">2shine DNN BS5 2sxc </strong>
-      </li>
-      <li>
-        <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-          <span itemprop="streetAddress">Shine Road 77</span>,
-          <span itemprop="postalCode">50355</span>
-          <span itemprop="addressLocality">Shine City</span>,
-          <span itemprop="addressCountry">Shine Country</span>
-        </span>
-      </li>
-        <li><a href="tel:+41817506777">+41 81 750 67 77</a></li>
-      <li>
-        <span data-madr1="shine" data-madr2="example" data-madr3="com" data-linktext=""></span>
-      </li>
-    </ul>
-    <div class="to-shine-footer-imprint">
-        <dnn:login id="DnnLogin" cssclass="to-shine-page-login d-none d-lg-inline-flex" rel="nofollow" runat="server" />
-        <%-- 
-          Terms and Privacy Links are set in "Site Settings" > "Site Behavior"
-        --%>
-        <a href="<%= DotNetNuke.Common.Globals.NavigateURL(PortalController.GetCurrentPortalSettings().PrivacyTabId) %>" title="<%= LocalizeString("Imprint.Text") %>"><%= LocalizeString("Imprint.Text") %></a> | 
-        <a href="<%= DotNetNuke.Common.Globals.NavigateURL(PortalController.GetCurrentPortalSettings().TermsTabId) %>" title="<%= LocalizeString("Privacy.Text") %>"><%= LocalizeString("Privacy.Text") %></a>
-    </div>
   </div>
 </footer>
 
